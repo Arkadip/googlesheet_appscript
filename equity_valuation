@@ -17,8 +17,10 @@ function getValuation_prod() {
   let day = weekday[today.getDay()];
   const full_day = day + ' ' + today
 
-  var portfolio_value = get_sheet.getRange('m14').getValue();
+  var portfolio_value = get_sheet.getRange('m13').getValue();
 
+  get_sheet.getRange('f12').setValue(portfolio_value);
+  
   put_sheet.appendRow([
     full_day,
     formattedToday,
@@ -30,4 +32,3 @@ function getValuation_prod() {
   Logger.log(portfolio_value)
   Logger.log(formattedToday)
   debugger;  }
-
